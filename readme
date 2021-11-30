@@ -1,0 +1,6 @@
+https://www.digitalocean.com/community/pages/kubernetes-challenge
+
+Deploy an internal container registry
+Kubernetes does not provide an internal container registry but it is often useful to add one. There are many projects which enable you to deploy an internal container registry, such as Harbour or Trow.
+
+https://goharbor.io/docs/2.4.0/install-config/
