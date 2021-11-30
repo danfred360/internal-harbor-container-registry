@@ -1,0 +1,7 @@
+Getting familiar with Kubernetes by deploying a containerized flask app to a kubernetes cluster running on my machine using kind
+
+https://kind.sigs.k8s.io/docs/user/quick-start/
+
+https://kubernetes.io/docs/reference/kubectl/overview/
+
+https://www.digitalocean.com/community/meetup_kits/getting-started-with-containers-and-kubernetes-a-digitalocean-workshop-kit
