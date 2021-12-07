@@ -1,0 +1,56 @@
+ 2004  cd code/docean_challenge/internal_harbor_container_registry/
+ 2005  ls
+ 2006  mkdir harbour
+ 2007  cd harbour/
+ 2008  ls
+ 2009  touch readme
+ 2010  nano readme 
+ 2011  minikube --version
+ 2012  minikube --help
+ 2013  minikube list
+ 2014  kubectl status
+ 2015  minikube status
+ 2016  minkube start --vm-driver virtualbox
+ 2017  minikube start --vm-driver virtualbox
+ 2018  minikube addons enable ingress
+ 2019  helm repo add harbor https://helm.goharbor.io
+ 2020  sudo snap install heml
+ 2021  sudo snap install helm
+ 2022  sudo snap install helm --classic
+ 2023  helm repo add harbor https://helm.goharbor.io
+ 2024  helm install my-release harbor/harbor
+ 2025  kubectl get pods
+ 2026  minikube ip
+ 2027  minikube ip | c
+ 2028  grep --help
+ 2029  sudo cp /etc/hosts /home/dpfrederick/Documents/backup/hosts
+ 2030  nano /etc/hosts
+ 2031  sudo nano /etc/hosts
+ 2032  eval $(minikube docker-env)
+ 2033  kubectl -n harbor get secrets harbor-ingress -o jsonpath="{.data['ca\.crt']}" | base64 -D > harbor-ca.crt
+ 2034  kubectl -n harbor get secrets harbor-ingress -o jsonpath="{.data['ca\.crt']}" | base64 -d > harbor-ca.crt
+ 2035  kubectl config set-context --current --namespace=harbor
+ 2036  kubectl -n harbor get secrets harbor-ingress -o jsonpath="{.data['ca\.crt']}" | base64 -d > harbor-ca.crt
+ 2037  kubectl -n my-release get secrets harbor-ingress -o jsonpath="{.data['ca\.crt']}" | base64 -d > harbor-ca.crt
+ 2038  kubectl get namespaces
+ 2039  kubectl -n default get secrets harbor-ingress -o jsonpath="{.data['ca\.crt']}" | base64 -d > harbor-ca.crt
+ 2040  kubectl -n default get secrets ingress-nginx -o jsonpath="{.data['ca\.crt']}" | base64 -d > harbor-ca.crt
+ 2041  kubectl -n ingress-nginx get secrets harbor-ingress -o jsonpath="{.data['ca\.crt']}" | base64 -d > harbor-ca.crt
+ 2042  kubectl -n kube-public get secrets harbor-ingress -o jsonpath="{.data['ca\.crt']}" | base64 -d > harbor-ca.crt
+ 2043  kubectl get pods
+ 2044  kubectl get namespaces
+ 2045  kubectl config set-context --current --namespace=default
+ 2046  kubectl get pods
+ 2047  kubectl -n default get secrets ingress-nginx -o jsonpath="{.data['ca\.crt']}" | base64 -d > harbor-ca.crt
+ 2048  kubectl get secrets
+ 2049  kubectl -n default get secrets my-release-harbor-ingress -o jsonpath="{.data['ca\.crt']}" | base64 -d > harbor-ca.crt
+ 2050  $ scp -o IdentitiesOnly=yes -i $(minikube ssh-key) harbor-ca.crt docker@$(minikube ip):./harbor-ca.crt
+ 2051  scp -o IdentitiesOnly=yes -i $(minikube ssh-key) harbor-ca.crt docker@$(minikube ip):./harbor-ca.crt
+ 2052  minikube ssh
+ 2053  docker login core.harbor.domain --username=admin --password Harbor12345
+ 2054  docker pull nginx
+ 2055  ls
+ 2056  docker tag nginx core.harbor.domain/library/nginx:latest
+ 2057  docker push core.harbor.domain/library/nginx:latest
+ 2058  ls
+ 2059  history > terminal_log.txt
