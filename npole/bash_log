@@ -1,0 +1,61 @@
+cd code/docean_challenge/internal_harbor_container_registry/
+ls
+mkdir npole
+cd npole/
+touch hello-kubernetes-first.yml
+doctl kubernetes cluster kubeconfig save npole-cluster
+doctl auth init
+doctl kubernetes cluster kubeconfig save npole-cluster
+sudo snap connect doctl:kube-config
+doctl kubernetes cluster kubeconfig save npole-cluster
+kubectl create -f hello-kubernetes-first.yaml
+ls
+mv hello-kubernetes-first.yml hello-kubernetes-first.yaml
+ls
+kubectl create -f hello-kubernetes-first.yaml
+kubectl get service hello-kubernetes-first
+touch hello-kubernetes-second.yaml
+kubectl create -f hello-kubernetes-second.yaml 
+kubectl get service
+helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
+helm repo update
+helm install nginx-ingress ingress-nginx/ingress-nginx --set controller.publishService.enabled=true
+kubectl --namespace default get services -o wide nginx-ingress-ingress-nginx-controller
+touch hello-kubernetes-ingress.yaml
+ls
+touch readme
+nano readme 
+kubectl apply -f hello-kubernetes-ingress.yaml 
+ls
+nano readme 
+kubectl create namespace cert-manager
+helm repo add jetstacj https://charts.jetstack.io
+helm repo update
+helm install cert-manager jetstack/cert-manager --namespace cert-manager --version v1.2.0 --set installCRDS=true
+helm install cert-manager jetstack/cert-manager --namespace cert-manager --set installCRDS=true
+helm repo list
+helm help
+helm list
+helm history cert-manager
+helm history jetstack/cert-manager
+helm install cert-manager jetstack/cert-manager --namespace cert-manager --version v1.4.0 --set installCRDS=true
+helm ls
+helm uninstall jetstacj
+helm repo add jetstack https://charts.jetstack.io
+helm install cert-manager jetstack/cert-manager --namespace cert-manager --version v1.2.0 --set installCRDS=true
+touch production_issuer.yaml
+kubectl apply -f production_issuer.yaml 
+helm ls
+helm repo list
+helm install cert-manager jetstack/cert-manager --namespace cert-manager --version v1.6.1 --set installCRDS=true
+helm uninstall cert-manager
+helm uninstall jetstacj
+helm list
+helm uninstall cert-manager jetstacj/cert-manager
+helm uninstall cert-manager jetstacj/cert-manager --namespace cert-manager
+helm uninstall cert-manager jetstack/cert-manager --namespace cert-manager
+helm install cert-manager jetstack/cert-manager --namespace cert-manager --version v1.6.1 --set installCRDS=true
+helm uninstall cert-manager jetstack/cert-manager --namespace cert-manager
+helm install cert-manager jetstack/cert-manager --namespace cert-manager --version v1.6.1 --set installCRDS=true
+helm uninstall cert-manager jetstack/cert-manager --namespace cert-manager
+helm install cert-manager jetstack/cert-manager --namespace cert-manager --version v1.6.1 --set installCRDS=true
