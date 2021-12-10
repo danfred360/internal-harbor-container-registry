@@ -1,10 +1,11 @@
-https://www.digitalocean.com/community/tutorials/how-to-set-up-a-private-docker-registry-on-top-of-digitalocean-spaces-and-use-it-with-digitalocean-kubernetes
+[Set up private docker registry on Digital Ocean using Kubernetes](https://www.digitalocean.com/community/tutorials/how-to-set-up-a-private-docker-registry-on-top-of-digitalocean-spaces-and-use-it-with-digitalocean-kubernetes)
 
-https://www.digitalocean.com/community/tutorials/how-to-set-up-an-nginx-ingress-on-digitalocean-kubernetes-using-helm
+[How to deploy and configure nginx ingress controller to DO cluster](https://www.digitalocean.com/community/tutorials/how-to-set-up-an-nginx-ingress-on-digitalocean-kubernetes-using-helm)
+
 **Note: This tutorial has a bug**
 
-hello-kubernetes-ingress.yaml - *tutorial version*
-`
+```hello-kubernetes-ingress.yaml``` - *tutorial version*
+```python
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
@@ -39,12 +40,12 @@ spec:
             name: hello-kubernetes-second
             port:
               number: 80
-`
+```
 
 should be
 
-hello-kubernetes-ingress.yaml - *correct version*
-`
+```hello-kubernetes-ingress.yaml``` - *correct version*
+```python
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
@@ -79,9 +80,10 @@ spec:
             name: hello-kubernetes-second
             port:
               number: 80
-`
+```
 per kubernetes docs - [Object Names and IDs](https://kubernetes.io/docs/concepts/overview/working-with-objects/names/)
 
+More links
 https://docs.digitalocean.com/products/kubernetes/how-to/connect-to-cluster/
 
 https://www.digitalocean.com/community/tutorials/how-to-create-a-digitalocean-space-and-api-key
