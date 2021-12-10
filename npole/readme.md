@@ -51,8 +51,8 @@ kind: Ingress
 metadata:
     name: hello-kubernetes-ingress
     annotations:
-    kubernetes.io/ingress.class: nginx
-    cert-manager.io/cluster-issuer: letsencrypt-prod
+      kubernetes.io/ingress.class: nginx
+      cert-manager.io/cluster-issuer: letsencrypt-prod
 spec:
   tls:
   - hosts:
